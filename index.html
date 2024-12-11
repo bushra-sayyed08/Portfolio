@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h2>Bushra Sayyed</h2>
+            </div>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#techstack">Tech Stack</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to Bushra's Portfolio</h1>
+        <p><b><i>Crafting elegant solutions for the digital world.</i></b></p>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <img src="your-photo.jpeg" alt="Your Picture">
+        <p><i>I'm a web developer who loves building modern, responsive, and user-friendly websites. I enjoy creating designs that not only look great but also work smoothly. I'm always learning new technologies to improve and deliver the best results. Let’s create something awesome together!</i></p>
+    </section>
+
+    <section id="techstack" class="techstack">
+        <h2>My Tech Stack</h2>
+        <div class="tech-list">
+            <div class="tech-item">HTML</div>
+            <div class="tech-item">CSS</div>
+            <div class="tech-item">JavaScript</div>
+            <div class="tech-item">React</div>
+            <div class="tech-item">Node.js</div>
+            <div class="tech-item">MongoDB</div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>My Projects</h2>
+        <div class="project-container">
+            <div class="project">
+                <img src="project1-img1.png" alt="Project 1 Image 1">
+                <img src="project1-img2.png" alt="Project 1 Image 2">
+                <img src="project1-img3.png" alt="Project 1 Image 3">
+                <img src="project1-img4.png" alt="Project 1 Image 4">
+                <p class="project-description">A fully responsive e-commerce web application inspired by Amazon.
+                    Features include user authentication, product search, shopping cart, and order management.
+                    Built using React for the front-end, Node.js and Express.js for the back-end, and MongoDB as the database.
+                    Integrated Stripe API for secure payment processing.
+                    Implemented state management with Redux to handle user sessions and cart data effectively.
+                    Focused on user-friendly design and seamless navigation across devices.</p>
+            </div>
+            <div class="project">
+                <img src="project2-img1.png" alt="Project 2 Image 1">
+                <img src="project2-img2.png" alt="Project 2 Image 2">
+                <img src="project2-img3.png" alt="Project 2 Image 3">
+                <img src="project2-img4.png" alt="Project 2 Image 4">
+                <p class="project-description">A modern and elegant web application designed to showcase artistic and creative works.
+                    Developed with HTML, CSS, and JavaScript for a fully interactive and dynamic user interface.
+                    Includes a carousel gallery to highlight multiple works or images with smooth animations.
+                    Features responsive design, ensuring compatibility across desktop, tablet, and mobile devices.
+                    Added lightbox functionality for enhanced viewing of images.
+                    Emphasizes aesthetics and functionality to provide a delightful user experience.</p>
+                <a href="https://center-piece.netlify.app/" class="project-link">View Center Piece</a>
+            </div>
+        </div>
+    </section>
+  
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <form id="contactForm">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+
+        <script>
+            const form = document.getElementById("contactForm");
+
+            form.addEventListener("submit", async (e) => {
+                e.preventDefault();
+                const formData = new FormData(form);
+
+                const response = await fetch("https://formspree.io/f/xvgonvlr", {
+                    method: "POST",
+                    body: formData,
+                    headers: {
+                        Accept: "application/json",
+                    },
+                });
+
+                if (response.ok) {
+                    alert("Message sent!");
+                    form.reset();
+                } else {
+                    alert("Failed to send message. Please try again.");
+                }
+            });
+        </script>
+
+        <div class="contact-details">
+            <h3>Or Reach Me At:</h3>
+            <ul>
+                <li><strong>Email:</strong> sayyedbushra810@gmail.com</li>
+                <li><strong>Phone:</strong> +91 9373420392</li>
+                <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/bushra-sayyed-b819b5267?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">BushraSayyed</a></li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/bushra-sayyed08" target="_blank">bushra-sayyed08</a></li>
+            </ul>
+        </div>
+    </section>
+</body>
+
+</html>
+
