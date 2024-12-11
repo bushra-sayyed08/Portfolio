@@ -1,0 +1,268 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #9c0c69;
+  --secondary-color: rgb(93, 93, 196);
+  --accent-color: #a04dff;
+  --background-color: #08081A;
+  --surface-color: #12122A;
+  --text-color: #FFFFFF;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  background-color: var(--surface-color);
+  padding: 20px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+nav .logo h2 {
+  color: var(--text-color);
+  font-size: 24px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: var(--text-color);
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--primary-color);
+}
+
+.hero {
+  background-color: var(--surface-color);
+  text-align: center;
+  padding: 80px 20px;
+  color: var(--text-color);
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+}
+
+
+.about {
+  background-color: var(--surface-color);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: var(--text-color);
+}
+
+.about img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+
+.techstack {
+  background-color: var(--background-color);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.techstack h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: var(--text-color);
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.tech-item {
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.tech-item:hover {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+
+.projects {
+  background-color: var(--surface-color);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: var(--text-color);
+}
+
+.project-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.project {
+  background-color: var(--background-color);
+  padding: 20px;
+  margin: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  width: 300px;
+}
+
+.project img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.project img:hover {
+  filter: brightness(1.1);
+}
+
+.project-link {
+  display: block;
+  text-align: center;
+  background-color: var(--primary-color);
+  padding: 10px 20px;
+  margin-top: 10px;
+  color: var(--text-color);
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+  background-color: var(--accent-color);
+}
+
+.contact {
+  background-color: var(--surface-color);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: var(--text-color);
+}
+
+.contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: var(--background-color);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 10px;
+  font-size: 16px;
+  color: var(--text-color);
+  background-color: var(--surface-color);
+}
+
+.contact button {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.contact button:hover {
+  background-color: var(--accent-color);
+}
+
+.contact-details {
+  margin-top: 40px;
+  font-size: 18px;
+  color: var(--text-color);
+}
+
+.contact-details ul {
+  list-style-type: none;
+}
+
+.contact-details ul li {
+  margin-bottom: 10px;
+}
+
+.contact-details a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+  color: var(--accent-color);
+}
+
+
+
+
